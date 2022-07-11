@@ -1,1 +1,7 @@
 <h3>{{component}}</h3>
+<h4>Card List</h4>
+<ul class="items">
+  <li (click)="onSelect(i)" *ngFor="let i of cards">
+    <span class="badge">{{i.id}}</span>{{i.name}}
+  </li>
+</ul>
