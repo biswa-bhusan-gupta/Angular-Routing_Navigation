@@ -5,6 +5,7 @@ import { CardComponent } from "./card/card.component";
 import { PageComponent } from "./page/page.component";
 import { CardDetailsComponent } from "./card-details/card-details.component";
 
+// STEP 1 : CREATE A LIST OF ROUTES CONSISTING OF COMPONENTS AND THEIR CORRESPONDING PATHS
 const routes: Routes = [
   // { path: "", redirectTo: "/card", pathMatch: "full" },
   { path: "test", component: TestComponent },
@@ -16,6 +17,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
+// STEP 2 : CREATE A LIST OF ROUTING COMPONENT CONSISTING OF ALL COMPONENTS
 export class AppRoutingModule {}
 export const routingComponents = [
   TestComponent,

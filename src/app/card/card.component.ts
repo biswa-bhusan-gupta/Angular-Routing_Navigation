@@ -4,13 +4,25 @@ import { ActivatedRoute, ParamMap } from "@angular/router";
 
 @Component({
   selector: "app-card",
-  templateUrl: "./card.component.html",
+  template: `<h3>{{ component }}</h3>
+    <h4>Card List</h4>
+    <ul class="items">
+      <li
+        (click)="onSelect(i)"
+        [class.selected]="isSelected(i)"
+        *ngFor="let i of cards"
+      >
+        <span class="badge">{{ i.id }}</span
+        >{{ i.name }}
+      </li>
+    </ul> `,
   styleUrls: ["./card.component.css"]
 })
 export class CardComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
   component = "Card Component";
 
+  // FOR ACTIVE ROUTE :
   public selectedId;
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {

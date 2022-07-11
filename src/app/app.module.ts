@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 // import { CardComponent } from "./card/card.component";
 import { PageComponent } from "./page/page.component";
 
+// STEP 3 : IMPORT APP ROUTING MODULE AND ROUTING COMPONENTS
 import { AppRoutingModule, routingComponents } from "./app-routing.module";
 
 @NgModule({
