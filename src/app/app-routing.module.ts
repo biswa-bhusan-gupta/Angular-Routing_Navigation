@@ -9,7 +9,7 @@ import { ValComponent } from "./test-val/test-val.component";
 
 // STEP 1 : CREATE A LIST OF ROUTES CONSISTING OF COMPONENTS AND THEIR CORRESPONDING PATHS
 const routes: Routes = [
-  // { path: "", redirectTo: "/card", pathMatch: "full" },
+  { path: "", redirectTo: "/card", pathMatch: "full" },
   {
     path: "test",
     component: TestComponent,
